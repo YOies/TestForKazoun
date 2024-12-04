@@ -1,1 +1,56 @@
-game.Players.LocalPlayer:Kick("kazoun removed")
+repeat wait() until game:IsLoaded()
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(3)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+ wait(4)
+local Player = game.Players.LocalPlayer
+local vim = game:GetService("VirtualInputManager")
+local inset1, inset2 = game:GetService('GuiService'):GetGuiInset()
+local insetOffset = inset1 - inset2
+
+while task.wait(1) do 
+if game.PlaceId == 13775256536 then 
+
+    Player.Character.HumanoidRootPart.CFrame = CFrame.new(-664.029053, 244.923676, -567.880249, 0.968755066, 5.4488293e-08, -0.248019338, -3.62241757e-08, 1, 7.82033354e-08, 0.248019338, -6.67755842e-08, 0.968755066)
+     wait(2)
+    local part =game:GetService("Players").LocalPlayer.PlayerGui.Matchmaking.Ranked.RankedQueue.QueueButton
+      local topLeft = part.AbsolutePosition + insetOffset
+      local center = topLeft + (part.AbsoluteSize/2)
+      local X = center.X + 30
+      local Y = center.Y
+        vim:SendMouseButtonEvent(X, Y, 0, true, game, 0)
+        task.wait()
+        vim:SendMouseButtonEvent(X, Y, 0, false, game, 0)
+     else
+
+        local autoSkipButton = game:GetService("Players").LocalPlayer.PlayerGui.Match.MatchInfo.AutoSkip.OnAndOff
+if autoSkipButton.BackgroundColor3 == Color3.fromRGB(255, 0, 0) then
+wait(1)
+        local part2 =  game:GetService("Players").LocalPlayer.PlayerGui.Match.MatchInfo.AutoSkip.OnAndOff
+        local topLeft = part2.AbsolutePosition + insetOffset
+        local center = topLeft + (part2.AbsoluteSize/2)
+        local X = center.X + 0
+        local Y = center.Y
+          vim:SendMouseButtonEvent(X, Y, 0, true, game, 0)
+          task.wait()
+          vim:SendMouseButtonEvent(X, Y, 0, false, game, 0)
+end 
+
+      if game:GetService("Players").LocalPlayer.PlayerGui.FinishUI.MatchFinish.Visible == true then 
+    wait(2)
+    local part =  game:GetService("Players").LocalPlayer.PlayerGui.FinishUI.MatchFinish.MatchFinishFrame.EndOptions.ReturnToLobby.ButtonFrame.ReturnToLobbyButton
+
+      local topLeft = part.AbsolutePosition + insetOffset
+      local center = topLeft + (part.AbsoluteSize/2)
+      local X = center.X + 30
+      local Y = center.Y
+        vim:SendMouseButtonEvent(X, Y, 0, true, game, 0)
+        task.wait()
+        vim:SendMouseButtonEvent(X, Y, 0, false, game, 0)
+
+    end 
+     end
+    end 
